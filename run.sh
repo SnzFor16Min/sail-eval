@@ -30,7 +30,7 @@ is_dataset_incomplete() {
 get_gpu_id() {
 
   while true; do
-    read gpu_ids -r -p "Enter GPU IDs (e.g., 0,2,3): "
+    read -r -p "Enter GPU IDs (e.g., 0,2,3): " gpu_ids
 
     if [[ $gpu_ids =~ ^[0-9]+(,[0-9]+)*$ ]]; then
       break
@@ -44,7 +44,7 @@ get_gpu_id() {
 get_model_path() {
 
   while true; do
-    read model_path -r -p "Enter model directory path: "
+    read -r -p "Enter model directory path: " model_path
 
     if [ -d "$model_path" ]; then
       break
